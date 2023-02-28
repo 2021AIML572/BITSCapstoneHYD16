@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import logging
-from .routers import jd_generator
+from routers import jd_generator
 
 app = FastAPI(title="Job Description Generator API", description="Job Description Generator")
 
