@@ -9,7 +9,7 @@ os.environ['AZURE_STORAGE_CONNECTION_STRING'] = get_settings().AZURE_STORAGE_CON
 os.environ['AZURE_ACCESS_KEY'] = get_settings().AZURE_ACCESS_KEY
 
 
-mlflow.tracking.set_tracking_uri("http://mltracking.deepailytics.com/")
+mlflow.tracking.set_tracking_uri("http://20.251.61.26:5000")
 
 def load_model_mlflow():
     mlflow.set_experiment('job-desc-generator')
