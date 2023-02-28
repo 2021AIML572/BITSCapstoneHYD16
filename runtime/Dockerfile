@@ -4,9 +4,7 @@ FROM python:3.7.13
 # ENV DEBIAN_FRONTEND noninteractive
 # ENV LANG=en_US.UTF-8
 
-#RUN apt-get update && \
- # apt-get upgrade -y && \
-  #apt-get install -q -y  python3-pip libsnappy-dev language-pack-en supervisor
+RUN apt-get update &&   apt-get upgrade -y &&   apt-get install -q -y  python3-pip libsnappy-dev language-pack-en supervisor
   
 RUN pip3 install --upgrade pip requests
 
