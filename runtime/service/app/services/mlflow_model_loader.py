@@ -9,7 +9,7 @@ from app.configurations.settings import get_settings
 #os.environ['AZURE_ACCESS_KEY'] = get_settings().AZURE_ACCESS_KEY
 
 
-mlflow.tracking.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.tracking.set_tracking_uri("http://localhost:5000")
 
 def load_model_mlflow():
     print('loading model from mlflow')
