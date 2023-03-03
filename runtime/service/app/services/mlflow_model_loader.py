@@ -13,9 +13,12 @@ mlflow.tracking.set_tracking_uri("http://127.0.0.1:5000")
 
 def load_model_mlflow():
     print('loading model from mlflow')
-    mlflow.set_experiment('job-desc-generator')
+    
+    exp_name = "job-desc-generator" 
+    mlflow.set_experiment(exp_name)
+    
     print('After set experiment')
-    with mlflow.start_run(run_name='myrun'):
+    with mlflow.start_run(run_name="myrun"):
        mlflow.log_artifacts("run1", artifact_path=get_settings().artifact_uri)
     
     print('After log artifacts')
