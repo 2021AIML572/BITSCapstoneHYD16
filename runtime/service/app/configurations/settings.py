@@ -7,7 +7,7 @@ class Settings(BaseSettings):
     AZURE_STORAGE_CONNECTION_STRING: str = "DefaultEndpointsProtocol=https;AccountName=something;AccountKey=something;EndpointSuffix=something"
     AZURE_ACCESS_KEY: str = 'something'
     QNAMAKER_RUN_ID: str = 'run_id'
-    artifact_uri: str = 'mlflow_artifact_uri'
+    artifact_uri: str = '/app/services/checkpoint/run1'
 
 def get_settings():
     return Settings()
