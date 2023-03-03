@@ -12,9 +12,15 @@ from app.configurations.settings import get_settings
 mlflow.tracking.set_tracking_uri("http://20.251.61.26:5000")
 
 def load_model_mlflow():
+    print('loading model from mlflow')
     mlflow.set_experiment('job-desc-generator')
-    RESOURCE_PATH = os.getcwd() + '/app/services/checkpoint'
-    file_path = Path(os.path.join(RESOURCE_PATH))
+    print('After set experiment')
+    with mlflow.start_run(run_name='myrun'):
+       mlflow.log_artifacts("run1", artifact_path=get_settings().artifact_uri)
     
-    if ~file_path.exists():
-        mlflow.artifacts.download_artifacts(artifact_uri=get_settings().artifact_uri, dst_path=file_path)
+    print('After log artifacts')
+    #RESOURCE_PATH = os.getcwd() + '/app/services/checkpoint'
+    #file_path = Path(os.path.join(RESOURCE_PATH))
+    
+    #if ~file_path.exists():
+        #mlflow.artifacts.download_artifacts(artifact_uri=get_settings().artifact_uri, dst_path=file_path)
