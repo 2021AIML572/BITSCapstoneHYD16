@@ -42,8 +42,8 @@ def load_saved_model():
   #os.environ['MLFLOW_TRACKING_PASSWORD'] = get_settings().MLFLOW_TRACKING_PASSWORD
   #os.environ['AZURE_STORAGE_CONNECTION_STRING'] = get_settings().AZURE_STORAGE_CONNECTION_STRING
   #os.environ['AZURE_ACCESS_KEY'] = get_settings().AZURE_ACCESS_KEY
-  os.environ['MLFLOW_HTTP_REQUEST_TIMEOUT'] ="10000"
-  load_model_mlflow()
+  #os.environ['MLFLOW_HTTP_REQUEST_TIMEOUT'] ="10000"
+  #load_model_mlflow()
 
 @router.post("/predictJobDescription") 
 async def predictJobDescription(request_model:RequestModel):
