@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mlopsproj-deployment
+  labels:
+    app: mlopsproj-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: mlopsproj
+  template:
+    metadata:
+      labels:
+        app: mlopsproj
+    spec:
+      containers:
+      - name: mlopsproj
+        image: bitsgroupregistry.azurecr.io/mlopsproj:1.0
+        ports:
+        - containerPort: 80
