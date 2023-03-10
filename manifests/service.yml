@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "myakscluster-9773"
+    labels:
+        app: "myakscluster-9773"
+spec:
+    type: ClusterIP
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "myakscluster-9773"
