@@ -1,4 +1,4 @@
-FROM python:3.7.13
+FROM python:3.7.13 
 
 # Setup python and java and base system
 # ENV DEBIAN_FRONTEND noninteractive
